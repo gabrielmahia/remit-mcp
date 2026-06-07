@@ -1,0 +1,25 @@
+{
+  "$schema": "https://glama.ai/mcp/schemas/manifest.json",
+  "name": "remit-mcp",
+  "description": "Kenya diaspora remittance intelligence \u2014 compare corridor costs, find cheapest provider. World Bank RPW data.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Gabriel Mahia",
+    "url": "https://github.com/gabrielmahia"
+  },
+  "license": "MIT",
+  "tools": [
+    {
+      "name": "compare_remittance_corridors",
+      "description": "Compare all providers for a remittance corridor"
+    },
+    {
+      "name": "estimate_savings",
+      "description": "Calculate annual savings by switching providers"
+    },
+    {
+      "name": "list_corridors",
+      "description": "List all supported corridors"
+    }
+  ]
+}
