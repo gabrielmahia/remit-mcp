@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "remit-mcp"
+version = "0.1.0"
+description = "MCP server for Kenya diaspora remittance optimization"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Gabriel Mahia", email = "contact@aikungfu.dev" }]
+keywords = ["mcp", "remittance", "kenya", "diaspora", "fintech", "east-africa"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Office/Business :: Financial",
+]
+requires-python = ">=3.10"
+dependencies = ["fastmcp>=0.9", "requests>=2.31"]
+
+[project.scripts]
+remit-mcp = "remit_mcp.server:main"
+
+[project.urls]
+Homepage = "https://github.com/gabrielmahia/remit-mcp"
+Repository = "https://github.com/gabrielmahia/remit-mcp"
+
+[tool.setuptools.packages.find]
+where = ["src"]
