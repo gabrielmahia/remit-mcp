@@ -1,5 +1,8 @@
 # 💸 remit-mcp
 
+[![remit-mcp Glama score](https://glama.ai/mcp/servers/gabrielmahia/remit-mcp/badges/score.svg)](https://glama.ai/mcp/servers/gabrielmahia/remit-mcp)
+
+
 **First MCP server for African diaspora remittance optimization.**
 
 ```bash
