@@ -4,7 +4,7 @@
 [![smithery badge](https://smithery.ai/badge/@gabrielmahia/remit-mcp)](https://smithery.ai/server/@gabrielmahia/remit-mcp)
 
 
-**First MCP server for African diaspora remittance optimization.**
+Remittance corridor fees to East Africa often run well above the UN SDG 10.c target of 3% by 2030 — but comparing corridors requires checking each provider manually.
 
 ```bash
 pip install remit-mcp
