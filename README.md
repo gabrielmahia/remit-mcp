@@ -4,6 +4,14 @@
 [![smithery badge](https://smithery.ai/badge/@gabrielmahia/remit-mcp)](https://smithery.ai/server/@gabrielmahia/remit-mcp)
 
 
+---
+**Compatible with `claude-sonnet-5`** (released 2026-06-30) — Anthropic's most agentic
+Sonnet yet. Runs multi-step tool chains end-to-end without stopping short.
+Install: `pip install remit-mcp` · Use with any MCP client.
+
+---
+
+
 Remittance corridor fees to East Africa often run well above the UN SDG 10.c target of 3% by 2030 — but comparing corridors requires checking each provider manually.
 
 ```bash
