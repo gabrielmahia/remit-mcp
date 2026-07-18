@@ -26,6 +26,10 @@ remit-mcp = "remit_mcp.server:main"
 [project.urls]
 Homepage = "https://github.com/gabrielmahia/remit-mcp"
 Repository = "https://github.com/gabrielmahia/remit-mcp"
+Documentation = "https://github.com/gabrielmahia/nairobi-stack"
+"MCP Registry" = "https://registry.modelcontextprotocol.io"
+Datasets = "https://huggingface.co/gmahia"
+Evaluation = "https://github.com/gabrielmahia/kipimo"
 
 [tool.setuptools.packages.find]
 where = ["src"]
