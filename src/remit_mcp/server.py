@@ -8,17 +8,18 @@ Research basis:
   IrokoBench arXiv:2406.03368 — African language AI capability benchmark
   World Bank "Migration and Development Brief" 2025 — Kenya top-10 remittance recipient
 
-First in Africa: MCP server exposing remittance corridor intelligence for AI agents.
-Kenya received USD 4.2B in remittances in 2024 (World Bank Migration Brief 2025).
-35% of corridor fees go to intermediaries — this server helps minimize that.
+MCP server exposing remittance corridor comparison for AI agents. THE PRICING DATA IS SYNTHETIC (see DEMO notes).
+Context, not data held here: Kenya received USD 4.94 billion in remittances in calendar 2024 (USD 4.18 billion in 2023) per the Central Bank of Kenya,
+reported by Business Daily; USD 5.08 billion in FY2024/25.
 """
 
-import os
 import hashlib
-import logging
 import json
+import logging
+import os
 from datetime import datetime, timezone
 from typing import Annotated
+
 from fastmcp import FastMCP
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
@@ -30,7 +31,7 @@ mcp = FastMCP(
     instructions=(
         "Kenya diaspora remittance intelligence. "
         "Compare corridor costs, find optimal timing windows, and estimate fees across providers. "
-        "Data: World Bank RPW database + public exchange rate APIs. "
+        "Data: SYNTHETIC demonstration prices; not from the World Bank RPW database and not live exchange rates. "
         "DEMO: Synthetic pricing data representative of Kenya corridor patterns. "
         "Not financial advice — verify live rates before sending."
     )
@@ -149,7 +150,7 @@ def compare_remittance_corridors(
         "world_bank_global_avg_pct": 6.3,
         "sdg_target_pct": 3.0,
         "note": "DEMO — Synthetic data representative of World Bank RPW Kenya corridors. Verify live rates before sending.",
-        "source": "World Bank Remittance Prices Worldwide (remittanceprices.worldbank.org)"
+        "source": "DEMO: synthetic, NOT World Bank data. Check real corridor costs at remittanceprices.worldbank.org"
     }
 
 @mcp.tool(annotations={"readOnlyHint": True, "destructiveHint": False, "idempotentHint": True})
@@ -194,7 +195,7 @@ def list_corridors() -> dict:
     return {
         "corridors": list(CORRIDORS.keys()),
         "descriptions": {k: v["name"] for k, v in CORRIDORS.items()},
-        "note": "DEMO data. Kenya received USD 4.2B in remittances in 2024 (World Bank Migration Brief 2025)."
+        "note": "DEMO data (synthetic prices). Context: Kenya received USD 4.94 billion in remittances in calendar 2024 per the Central Bank of Kenya."
     }
 
 def main():

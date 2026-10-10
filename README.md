@@ -28,10 +28,11 @@ remit-mcp
 | `list_corridors` | List all supported corridors |
 
 ## Research Basis
-- **World Bank Remittance Prices Worldwide** — Global database of corridor costs. SDG target: reduce to 3% by 2030. Current global average: 6.3%. Kenya corridors: 4.1–9.1%.
-- **World Bank Migration & Development Brief 2025** — Kenya received USD 4.2B in remittances in 2024. Top-10 African recipient.
-- **"Democratizing AI in Africa"** arXiv:2408.17216 — AI tools for financial inclusion in resource-constrained settings.
-- **IrokoBench** arXiv:2406.03368 — Swahili AI capability benchmark; multilingual financial AI for Africa.
+- **World Bank Remittance Prices Worldwide** is the database to check real corridor costs against (SDG 10.c target: 3% by 2030). This server's corridor prices are **synthetic** and are not World Bank figures.
+- **Central Bank of Kenya**: Kenya received USD 4.94 billion in remittances in calendar 2024 (USD 4.18 billion in 2023), reported by Business Daily; a record USD 5.08 billion in FY2024/25; the CBK's own release puts 2024 at Ksh 666.7 billion, about 4% of GDP. (An earlier version of this README said USD 4.2 billion for 2024, which was the 2023 level.)
+
+## Context: PAPSS and Pesalink (2026), not modelled here
+In February 2026 Kenya's Pesalink instant-payment network linked to the Pan-African Payment and Settlement System (PAPSS), so that PAPSS participants can send into Kenyan banks and mobile-money wallets in local currency (source: PAPSS and Pesalink announcements, 26 Feb 2026). This server compares US, UK and Canada corridors only; it does not model intra-African or PAPSS routes.
 
 ## DEMO Note
 Current data is synthetic, representative of World Bank RPW Kenya corridor patterns.
