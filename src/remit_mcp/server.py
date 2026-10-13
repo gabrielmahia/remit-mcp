@@ -97,7 +97,7 @@ CORRIDORS = {
     }
 }
 
-@mcp.tool(annotations={
+@mcp.tool(description="Compare typical costs of sending money to Kenya on one corridor (US_KE, UK_KE or CA_KE) for an amount in US dollars, across provider types. Use when someone asks which way of sending money costs least. An unknown corridor returns an error listing the supported ones. The prices are SYNTHETIC illustrations, not World Bank or live provider data. Returns the corridor, amount, the provider comparison, the global average and SDG target percentages for context, and a note. Always check real prices at remittanceprices.worldbank.org before sending. Read-only; no side effects.", annotations={
     "readOnlyHint": True, "destructiveHint": False, "idempotentHint": True
 })
 def compare_remittance_corridors(
@@ -153,7 +153,7 @@ def compare_remittance_corridors(
         "source": "DEMO: synthetic, NOT World Bank data. Check real corridor costs at remittanceprices.worldbank.org"
     }
 
-@mcp.tool(annotations={"readOnlyHint": True, "destructiveHint": False, "idempotentHint": True})
+@mcp.tool(description="Estimate how much a person could save by moving from their current provider to a cheaper option on a corridor, per month and per year in US dollars and in KES (at a fixed 130 KES per USD). Use when someone asks what switching would save. An unknown corridor returns an error. Based on SYNTHETIC illustrative prices and a fixed exchange rate, not live data. Returns the monthly and annual savings and a note. Verify with live provider rates. Read-only; no side effects.", annotations={"readOnlyHint": True, "destructiveHint": False, "idempotentHint": True})
 def estimate_savings(
     corridor: Annotated[str, "Corridor code: US_KE, UK_KE, CA_KE"],
     monthly_amount_usd: Annotated[float, "Monthly remittance amount in USD"],
@@ -189,7 +189,7 @@ def estimate_savings(
         "note": "DEMO — Synthetic data. Verify with live provider rates."
     }
 
-@mcp.tool(annotations={"readOnlyHint": True, "destructiveHint": False, "idempotentHint": True})
+@mcp.tool(description="List the remittance corridors the server supports (US_KE, UK_KE, CA_KE) with plain descriptions, plus context on Kenya's remittance inflows (USD 4.94 billion in calendar 2024 per the Central Bank of Kenya). Use first, to learn valid corridor codes for the other tools. Takes no arguments. Returns the corridors, their descriptions and a note that the data are synthetic. The server does not model PAPSS or Pesalink routes. Read-only; no side effects.", annotations={"readOnlyHint": True, "destructiveHint": False, "idempotentHint": True})
 def list_corridors() -> dict:
     """List all supported remittance corridors."""
     return {
