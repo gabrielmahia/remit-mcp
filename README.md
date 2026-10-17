@@ -5,12 +5,8 @@
 [![smithery badge](https://smithery.ai/badge/@gabrielmahia/remit-mcp)](https://smithery.ai/server/@gabrielmahia/remit-mcp)
 
 
----
-**Compatible with `claude-sonnet-5`** (released 2026-06-30) — Anthropic's most agentic
-Sonnet yet. Runs multi-step tool chains end-to-end without stopping short.
 Install: `pip install remit-mcp` · Use with any MCP client.
 
----
 
 
 Remittance corridor fees to East Africa often run well above the UN SDG 10.c target of 3% by 2030 — but comparing corridors requires checking each provider manually.
@@ -58,7 +54,7 @@ Live demo: [coord-cascade-demo](https://github.com/gabrielmahia/coord-cascade-de
 
 MIT licensed. Feedback via GitHub Issues only — pull requests are not accepted. Demo data is labeled DEMO and is not suitable for operational decisions. Full policy: [docs/architecture/IP_POLICY.md](docs/architecture/IP_POLICY.md). Security reports: see [SECURITY.md](SECURITY.md).
 
-<!-- interconnect:v1 -->
+<!-- interconnect:v2 -->
 ## Part of the East Africa coordination stack
 
 - **Install & run:** `pip install reli-cli && reli list` — the MCP servers on the [official MCP Registry](https://registry.modelcontextprotocol.io) under `io.github.gabrielmahia`
@@ -67,4 +63,4 @@ MIT licensed. Feedback via GitHub Issues only — pull requests are not accepted
 - **Datasets:** [huggingface.co/gmahia](https://huggingface.co/gmahia) · **Docs hub:** [nairobi-stack](https://github.com/gabrielmahia/nairobi-stack)
 
 Model-agnostic by design: closed APIs, open-weight models, and small distilled models are all first-class citizens.
-<!-- /interconnect:v1 -->
+<!-- /interconnect:v2 -->
