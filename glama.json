@@ -2,7 +2,7 @@
   "$schema": "https://glama.ai/mcp/schemas/manifest.json",
   "name": "remit-mcp",
   "description": "MCP server for Kenya diaspora remittance optimization",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "author": {
     "name": "Gabriel Mahia",
     "url": "https://github.com/gabrielmahia"
