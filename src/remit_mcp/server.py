@@ -18,6 +18,8 @@ import json
 import logging
 import os
 from datetime import datetime, timezone
+from importlib.metadata import PackageNotFoundError
+from importlib.metadata import version as _pkg_version
 from typing import Annotated
 
 from fastmcp import FastMCP
@@ -25,9 +27,15 @@ from fastmcp import FastMCP
 logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
 _log = logging.getLogger("remit-mcp")
 
+try:
+    _VERSION = _pkg_version("remit-mcp")
+except PackageNotFoundError:  # a source tree that was never installed
+    _VERSION = "0+unknown"
+
+
 mcp = FastMCP(
     name="remit-mcp",
-    version="0.1.0",
+    version=_VERSION,
     instructions=(
         "Kenya diaspora remittance intelligence. "
         "Compare corridor costs, find optimal timing windows, and estimate fees across providers. "
