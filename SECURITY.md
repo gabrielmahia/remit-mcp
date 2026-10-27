@@ -1,5 +1,10 @@
 # Security Policy
 
-Report vulnerabilities to: **contact@aikungfu.dev**
+Reporting a Vulnerability
 
-Aligned with OWASP MCP Top 10 (2025) | NSA/CISA U/OO/143395-24 | OWASP LLM Top 10 (2025)
+If you discover an error:
+
+DO NOT open a public issue.
+
+Email directly to:
+contact@aikungfu.dev
