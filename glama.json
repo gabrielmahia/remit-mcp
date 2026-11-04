@@ -2,7 +2,7 @@
   "$schema": "https://glama.ai/mcp/schemas/manifest.json",
   "name": "remit-mcp",
   "description": "MCP server for Kenya diaspora remittance optimization",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "author": {
     "name": "Gabriel Mahia",
     "url": "https://github.com/gabrielmahia"
@@ -20,6 +20,14 @@
     {
       "name": "list_corridors",
       "description": "List the remittance corridors the server supports (US_KE, UK_KE, CA_KE) with plain descriptions, plus context on Kenya's remittance inflows (USD 4.94 billion in calendar 2024 per the Central Bank of Kenya). Use first, to learn valid corridor codes for the other tools. Takes no arguments. Returns the corridors, their descriptions and a note that the data are synthetic. The server does not model PAPSS or Pesalink routes. Read-only; no side effects."
+    },
+    {
+      "name": "live_exchange_rate",
+      "description": "Get today's exchange rate from a sending currency (for example USD, GBP, CAD or EUR) to Kenyan shillings, from a free live rates service, and optionally convert an amount. Use when someone asks how many shillings their money is worth today, or wants to sanity-check a provider's quoted rate. Returns the rate, the converted amount if given, the time the rates were last updated, the source and its required attribution; on a network or service failure it returns an error instead of a rate. Read-only; contacts an external service."
+    },
+    {
+      "name": "kenya_remittance_inflows",
+      "description": "Get Kenya's official personal remittance inflows for recent years from the World Bank's World Development Indicators, in US dollars and as a share of GDP. Use when someone needs the size or trend of money sent home to Kenya, for context on the corridors. Returns one row per year with both measures, the indicator codes, the source with its licence and the retrieval time; on a network or service failure it returns an error instead of figures. Read-only; contacts an external service."
     }
   ],
   "keywords": [

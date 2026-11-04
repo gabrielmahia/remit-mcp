@@ -22,6 +22,8 @@ remit-mcp
 | `compare_remittance_corridors` | Compare all providers for US→KE, UK→KE, CA→KE corridors |
 | `estimate_savings` | Calculate annual savings by switching providers |
 | `list_corridors` | List all supported corridors |
+| `live_exchange_rate` | **LIVE**: today's reference rate to KES (and an optional conversion) from the free ExchangeRate-API open endpoint |
+| `kenya_remittance_inflows` | **LIVE**: Kenya's personal remittance inflows by year (US$ and % of GDP) from the World Bank, CC BY 4.0 |
 
 ## Research Basis
 - **World Bank Remittance Prices Worldwide** is the database to check real corridor costs against (SDG 10.c target: 3% by 2030). This server's corridor prices are **synthetic** and are not World Bank figures.
@@ -29,6 +31,10 @@ remit-mcp
 
 ## Context: PAPSS and Pesalink (2026), not modelled here
 In February 2026 Kenya's Pesalink instant-payment network linked to the Pan-African Payment and Settlement System (PAPSS), so that PAPSS participants can send into Kenyan banks and mobile-money wallets in local currency (source: PAPSS and Pesalink announcements, 26 Feb 2026). This server compares US, UK and Canada corridors only; it does not model intra-African or PAPSS routes.
+
+## Live data
+
+Two tools query free live services and label every answer with its source and retrieval time; if a service does not answer, they return an error instead of a number. Rates By Exchange Rate API (https://www.exchangerate-api.com); World Bank World Development Indicators, CC BY 4.0. The corridor pricing tools still use synthetic data (below).
 
 ## DEMO Note
 Current data is synthetic, representative of World Bank RPW Kenya corridor patterns.
