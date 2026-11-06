@@ -2,12 +2,8 @@
 <!-- mcp-name: io.github.gabrielmahia/remit-mcp -->
 
 [![remit-mcp Glama score](https://glama.ai/mcp/servers/gabrielmahia/remit-mcp/badges/score.svg)](https://glama.ai/mcp/servers/gabrielmahia/remit-mcp)
-[![smithery badge](https://smithery.ai/badge/@gabrielmahia/remit-mcp)](https://smithery.ai/server/@gabrielmahia/remit-mcp)
-
 
 Install: `pip install remit-mcp` · Use with any MCP client.
-
-
 
 Remittance corridor fees to East Africa often run well above the UN SDG 10.c target of 3% by 2030 — but comparing corridors requires checking each provider manually.
 
