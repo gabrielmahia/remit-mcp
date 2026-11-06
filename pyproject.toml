@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "remit-mcp"
-version = "0.1.10"
+version = "0.1.11"
 description = "MCP server for Kenya diaspora remittance optimization"
 readme = "README.md"
 license = "MIT"
@@ -29,6 +29,7 @@ license-files = ["LICENSE"]
 remit-mcp = "remit_mcp.server:main"
 
 [project.urls]
+Issues = "https://github.com/gabrielmahia/remit-mcp/issues"
 Homepage = "https://github.com/gabrielmahia/remit-mcp"
 Repository = "https://github.com/gabrielmahia/remit-mcp"
 Documentation = "https://github.com/gabrielmahia/nairobi-stack"
