@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "remit-mcp"
-version = "0.1.11"
+version = "0.1.12"
 description = "MCP server for Kenya diaspora remittance optimization"
 readme = "README.md"
 license = "MIT"
@@ -22,7 +22,7 @@ classifiers = [
     "Topic :: Office/Business :: Financial",
 ]
 requires-python = ">=3.11"
-dependencies = ["fastmcp>=0.9", "requests>=2.31"]
+dependencies = ["fastmcp>=4.1.4", "requests>=2.33.0"]
 license-files = ["LICENSE"]
 
 [project.scripts]
