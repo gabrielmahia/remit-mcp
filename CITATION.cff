@@ -3,7 +3,7 @@ message: "If you use this software, please cite it as below."
 type: software
 title: "remit-mcp"
 abstract: "MCP server for Kenya diaspora remittance optimization"
-version: "0.1.11"
+version: "0.1.12"
 authors:
   - family-names: "Mahia"
     given-names: "Gabriel"
